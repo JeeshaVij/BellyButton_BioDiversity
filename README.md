@@ -2,8 +2,7 @@
 
 The below interactive dashboard has built to explore the Belly Button Biodiversity dataset, which classifies the bacterial species that 
 colonize human navels.
-The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, n the study) were present 
-in more than 70% of people, while the rest were relatively rare.
+
 
 ![img1](images/dash.png)
 
