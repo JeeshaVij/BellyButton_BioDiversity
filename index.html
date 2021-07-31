@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bellybutton Biodiversity</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center" style="background-image: url(Images/Image.jpg); width:100%;" >
+        <h1 style="color: white;"><b>Belly Button Biodiversity Dashboard</b></h1>
+        <h2 style="color: white;"><b>Use the interactive charts below to explore the dataset</b></h2>
+      </div>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Select Chart</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="#bar">Bar Chart</a></li>
+          <li><a href="#gauge">Gauge</a></li>
+          <li><a href="#bubble">Bubble</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-md-12">
+        <h4>
+          The below interactive dashboard has built to explore the Belly Button Biodiversity dataset, which classifies the bacterial species that 
+colonize human navels.
+The dataset reveals that a small handful of microbial species (also called operational taxonomic units, or OTUs, 
+in the study) were present in more than 70% of people, while the rest were relatively rare.
+        </h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h5>Test Subject ID No.:</h5>
+          <!-- <select id="selDataset"></select> -->
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary" style="width:100%;">
+          <div class="panel-heading">
+            <h3 class="panel-title">Demographic Info</h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-5">
+        <div id="bar" style="width:100%;"></div>
+        <p>A horizontal bar chart is created using JavaScript, Plotly, and D3.js to display the top 10 bacterial species (OTUs) when an individual’s ID 
+          is selected from the dropdown menu.The horizontal bar chart will display the "sample_values" as the values, 
+          the "otu_ids" as the labels, and the "otu_labels" as the hover text for the bars on the chart.</p>
+      </div>
+      <div class="col-xs-12 col-md-5">
+        <div id="gauge" style="width:100%;"></div>
+        <p>A gauge chart is created using JavaScript, Plotly, and D3.js that displays the weekly washing frequency's value, and display the value 
+          as a measure from 0-10 on the progress bar in the gauge chart when an individual ID is selected from the dropdown menu.
+  
+        </p>
+      </div>
+    </div>
+
+    <div class="row" style="width:100%;">
+      <div class="col-md-12">
+        <div id="bubble"></div>
+        <p>A bubble chart is created using JavaScript, Plotly, and D3.js that will display the following when an individual’s 
+          ID is selected from the dropdown menu webpage:
+          <ul>
+            <li>The "otu_ids" as the x-axis values.</li>
+            <li>The "sample_values" as the y-axis values</li>
+            <li>The "sample_values" as the marker size.</li>
+            <li>The "otu_ids" as the marker colors.</li>
+            <li>The "otu_labels" as the hover-text values.</li>
+          </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+  <div id="plotArea"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/charts.js"></script>
+
+</body>
+
+</html>
